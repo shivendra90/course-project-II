@@ -24,6 +24,13 @@ coal <- rbind(anthracite, bituminous, subbituminous, lignite)
 
 #Plot graphics
 png('plot4.png', 800,600)
-plot4 <- ggplot(coal, aes(x = year)) + geom_histogram() + facet_wrap(~SCC) + theme_bw(base_family = 'Times', base_size = 12) + labs(x = 'Year', y = 'Emissions', title = 'Emissions by coal type') + element_text(family = 'Times', face = 'italic', size = 12)
+plot4 <- ggplot(coal, aes(x = year)) 
+        + geom_histogram() 
+        + facet_wrap(~SCC) 
+        + theme_bw(base_family = 'Times', base_size = 12) 
+        + labs(x = 'Year', y = 'Emissions', title = 'Emissions by coal type')
+
+dev.off()
+#End
 
 dev.off()
