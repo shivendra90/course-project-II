@@ -15,6 +15,11 @@ baltimore.motors = rbind(baltimore.onroad, baltimore.nonroad)
 
 #Plot graphics
 png('plot5.png', 800,600)
-plot5 <- ggplot(baltimore.motors, aes(x = year)) + geom_histogram(color = 'steelblue', alpha = 0.6) + facet_wrap(~type) + theme_grey(base_family = 'Times', base_size = 14) + labs(x = 'Year', y = 'Emissions by motor vehicles', titles = 'Emissions by vehicle types')
+plot5 <- ggplot(baltimore.motors, aes(x = year)) 
+        + geom_histogram(color = 'steelblue', alpha = 0.6) 
+        + facet_wrap(~type) 
+        + theme_grey(base_family = 'Times', base_size = 14) 
+        + labs(x = 'Year', y = 'Emissions by motor vehicles', titles = 'Emissions by vehicle types')
 
 dev.off()
+#End
